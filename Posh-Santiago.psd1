@@ -16,7 +16,7 @@ ModuleVersion = '0.0.2.0'
 GUID = '84123dfc-9caa-4821-855b-375d4a2425cd'
 
 # Author of this module
-Author = 'santiago.bernhardt@gmail.com'
+Author = 'Santiago Bernhardt'
 
 # Company or vendor of this module
 CompanyName = 'SBE'
