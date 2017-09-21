@@ -6,7 +6,7 @@ function Get-ADUserDetails {
     $userdetails
 }
 
-# $users = ("")
+# $users = ("","")
 
 function Get-ADUserExpireDate {
     param(
@@ -33,4 +33,4 @@ function Get-ADUserExpireDate {
         Write-Output "$user is fine."
     }
 }
-#Get-ADUserExpireDate -users $users
+#Get-ADUserExpireDate -user $user -email $email
