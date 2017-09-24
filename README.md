@@ -10,7 +10,7 @@ Download module -> run Posh-Santiago.sandbox.ps1 to load.
 ```
 
 
-### Step Two: Install Posh-AwsEasy
+### Step Two: Install Posh-Santiago
 ```powershell
 psget\Install-Module -ModuleUrl https://github.com/sbe-arg/Posh-Santiago/archive/master.zip
 ```
