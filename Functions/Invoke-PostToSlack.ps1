@@ -5,7 +5,7 @@
 
     )
     process{
-        $body = "{`"text`":`"$text - Sent from:$env:COMPUTERNAME-$env:USERNAME`"}"
+        $body = "{`"text`":`"$text - Sentfrom:$env:COMPUTERNAME-$env:USERNAME`"}"
         Invoke-RestMethod -Uri $url -Body $Body -Method Post
     }
 }
