@@ -16,14 +16,8 @@ param(
     $nomorehash = $hash.GetEnumerator()
     $stringed = New-Object PSObject
     foreach ($h in $nomorehash){
-        if($h.key){
-            Write-Warning "Converting hash key: $($h.key) value: $($h.value) to string."
-            Add-Member -InputObject $stringed -MemberType NoteProperty -Name $h.Key -Value $h.Value -ErrorAction SilentlyContinue -Force
-        }
-        elseif($h.name){
-            Write-Warning "Converting hash key: $($h.name) value: $($h.value) to string."
-            Add-Member -InputObject $stringed -MemberType NoteProperty -Name $h.Name -Value $h.Value -ErrorAction SilentlyContinue -Force
-        }
+        Write-Warning "Converting hash key: $($h.name) value: $($h.value) to string."
+        Add-Member -InputObject $stringed -MemberType NoteProperty -Name $h.Name -Value $h.Value -ErrorAction SilentlyContinue -Force
     }
     return $stringed
 }
