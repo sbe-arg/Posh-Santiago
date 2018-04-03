@@ -13,7 +13,7 @@ param(
     [Parameter(Mandatory = $true)]
     [System.Collections.Hashtable]$Hash
 )
-    $nomorehash = $hash.GetEnumerator() | select name,value
+    $nomorehash = $hash.GetEnumerator()
     $stringed = New-Object PSObject
     foreach ($h in $nomorehash){
         Write-Warning "Converting hash key: $($h.name) value: $($h.value) to string."
