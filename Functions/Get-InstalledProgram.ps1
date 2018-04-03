@@ -4,10 +4,10 @@
 .DESCRIPTION
     none
 .EXAMPLE
-    Get-InstalledPrograms
+    Get-InstalledProgram
 #>
 
-function Get-InstalledPrograms {
+function Get-InstalledProgram {
   Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* |
     Where-Object {$_.DisplayName -notlike $null} |
     Select-Object DisplayName, DisplayVersion, Publisher, InstallDate, InstallLocation

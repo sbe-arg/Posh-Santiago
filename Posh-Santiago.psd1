@@ -10,7 +10,7 @@
 RootModule = 'Posh-Santiago.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.6.0'
+ModuleVersion = '0.0.7.0'
 
 
 # ID used to uniquely identify this module
@@ -65,7 +65,19 @@ Description = 'Santiago personal Module'
 # NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = '*'
+FunctionsToExport = @(
+  'Convert-HashToString'
+  'Get-ADUserDetail'
+  'Get-ADUserExpireDate'
+  'Get-FileFromWeb'
+  'Get-GUID'
+  'Get-InstalledProgram'
+  'Get-PSManagement'
+  'Get-TinyUrl'
+  'Get-TinyUrlLinkInfo'
+  'Invoke-DecodeBase64'
+  'Invoke-EncodeBase64'
+)
 
 # Cmdlets to export from this module
 CmdletsToExport = @()

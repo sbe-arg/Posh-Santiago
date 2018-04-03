@@ -1,8 +1,8 @@
 ﻿<#
 .SYNOPSIS
-    Tiny Url Fu
+    Tiny Url
 .DESCRIPTION
-    Get tinyurl convertion
+    Get tinyurl conversion
 .EXAMPLE
     NONE
 #>
@@ -19,7 +19,7 @@ Function Get-TinyUrl{
 
     $url = "http://tinyurl.com/api-create.php?url=$URL"
     $webclient = New-Object -TypeName System.Net.WebClient
-    $TinyURL = $webclient.DownloadString($url) 
+    $TinyURL = $webclient.DownloadString($url)
     Write-Output $TinyURL
 
 }
