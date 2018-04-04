@@ -9,7 +9,7 @@ install:
       Install-Module -Name Pester -Force
 
 environment:
-  ModuleName: Posh-Datadog
+  ModuleName: Posh-Santiago
   NuGetApiKey:
     secure: 9g0XGamfdzplyiYGs//sZteLfHaeciZve6EAYfIOqKWfgmS++0CFW9s8q7PdD+JA
 
