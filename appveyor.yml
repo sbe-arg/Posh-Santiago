@@ -20,6 +20,5 @@ test_script:
   - ps: if ($res.FailedCount -gt 0) { throw "$($res.FailedCount) tests failed."}
   - ps: |
       import-module ./ -Verbose
-      try{ Write-Out "Publishing..." }
+      try{ Publish-Module -Name Posh-Datadog -NuGetApiKey $env:NuGetApiKey }
       catch{ Write-Warning "Not publishing to PowerShellGallery. $($_.Exception.Message)" }
-      # Publish-Module -Name Posh-Datadog -NuGetApiKey $env:NuGetApiKey
