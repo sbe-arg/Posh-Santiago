@@ -1,5 +1,7 @@
-# Posh-Santiago
-My personal module.
+Posh-Santiago module
+===================
+
+[![Build status](https://ci.appveyor.com/api/projects/status/kcseeaec8602rj4l?svg=true)](https://ci.appveyor.com/project/sbe-arg/posh-santiago)
 
 # To test/debug:
 Download module -> run Posh-Santiago.sandbox.ps1 to load.
