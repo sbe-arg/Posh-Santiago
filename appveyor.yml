@@ -9,6 +9,7 @@ install:
       Install-Module -Name Pester -Force
 
 environment:
+  ModuleName: Posh-Datadog
   NuGetApiKey:
     secure: 9g0XGamfdzplyiYGs//sZteLfHaeciZve6EAYfIOqKWfgmS++0CFW9s8q7PdD+JA
 
@@ -20,5 +21,5 @@ test_script:
   - ps: if ($res.FailedCount -gt 0) { throw "$($res.FailedCount) tests failed."}
   - ps: |
       import-module ./ -Verbose
-      try{ Publish-Module -Name Posh-Datadog -NuGetApiKey $env:NuGetApiKey }
+      try{ Publish-Module -Name $env:ModuleName -NuGetApiKey $env:NuGetApiKey }
       catch{ Write-Warning "Not publishing to PowerShellGallery. $($_.Exception.Message)" }
