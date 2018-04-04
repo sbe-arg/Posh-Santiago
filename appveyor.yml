@@ -25,9 +25,10 @@ test_script:
       $ModulePath = Join-Path -Path $PSModulePath -ChildPath $ModuleName
       # Create Module folder
       if (-Not (Test-Path -Path "$ModulePath\$ENV:APPVEYOR_PROJECT_NAME\")) { New-Item -ItemType dir -Path "$ModulePath\$ENV:APPVEYOR_PROJECT_NAME\" | Out-Null }
-      gci $ENV:APPVEYOR_BUILD_FOLDER\* -recurse
+      gci $ModulePath\$ENV:APPVEYOR_PROJECT_NAME\* -recurse
       # Copy Module files
       Copy-Item -Path $("$ENV:APPVEYOR_BUILD_FOLDER\*") -Recurse -Destination "$ModulePath\$ENV:APPVEYOR_PROJECT_NAME\" -Force
       # Publish module to powershellgallery repository
+      Import-Module $ModulePath\$ENV:APPVEYOR_PROJECT_NAME -Verbose
       try{ Publish-Module $($ENV:APPVEYOR_PROJECT_NAME) -NuGetApiKey $ENV:NuGetApiKey }
       catch{ Write-Warning "Not publishing to PowerShellGallery. $($_.Exception.Message)" }
