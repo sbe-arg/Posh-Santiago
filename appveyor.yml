@@ -28,6 +28,7 @@ test_script:
       # Copy Module files
       Copy-Item -Path $("$ENV:APPVEYOR_BUILD_FOLDER\*") -Recurse -Destination "$ModulePath\" -Force
       # Publish module to powershellgallery repository
-      Import-Module $ModulePath\$ENV:APPVEYOR_PROJECT_NAME -Verbose
-      try{ Publish-Module $($ENV:APPVEYOR_PROJECT_NAME) -NuGetApiKey $ENV:NuGetApiKey }
+      Import-Module $ModulePath\$ENV:APPVEYOR_PROJECT_NAME
+      Get-Module $ENV:APPVEYOR_PROJECT_NAME
+      try{ Publish-Module -Name $($ENV:APPVEYOR_PROJECT_NAME) -NuGetApiKey $ENV:NuGetApiKey }
       catch{ Write-Warning "Not publishing to PowerShellGallery. $($_.Exception.Message)" }
