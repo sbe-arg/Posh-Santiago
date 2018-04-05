@@ -10,7 +10,7 @@
 RootModule = 'Posh-Santiago.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.8'
+ModuleVersion = '0.0.9'
 
 
 # ID used to uniquely identify this module
@@ -26,7 +26,7 @@ CompanyName = 'SBE'
 Copyright = '(c) 2016. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Santiago personal Module'
+Description = 'Santiago Bernhardt PSTools.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
