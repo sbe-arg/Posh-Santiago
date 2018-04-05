@@ -10,7 +10,7 @@
 RootModule = 'Posh-Santiago.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.7'
+ModuleVersion = '0.0.8'
 
 
 # ID used to uniquely identify this module
