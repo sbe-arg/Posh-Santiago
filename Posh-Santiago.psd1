@@ -10,7 +10,7 @@
 RootModule = 'Posh-Santiago.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.9'
+ModuleVersion = '0.0.10'
 
 
 # ID used to uniquely identify this module
@@ -109,7 +109,7 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/sbe-arg/Posh-Santiago'
 
         # A URL to an icon representing this module.
         # IconUri = ''
